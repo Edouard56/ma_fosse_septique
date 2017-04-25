@@ -1,0 +1,174 @@
+
+<div class="questions-footer">
+  <div class="progress-container">
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+        <span id="progress-percent">0</span>%
+      </div>
+    </div>
+  </div>
+
+<!--   <div class="controls">
+        <div class="control"><i class="fa fa-chevron-up"></i></div>
+        <div class="control"><i class="fa fa-chevron-down"></i></div>
+      </div> -->
+</div>
+
+
+<%= simple_form_for(@client) do |f| %>
+
+<div class='questions-container'>
+  <!-- ERROR NOTIFICATION NE MARCHE PAS -->
+  <%= f.error_notification %>
+  <div id="question_<%= question = 0 %>" class="question-container">
+    <div class="question-content">
+      <h3><span>1</span> <i class="fa fa-chevron-right"></i> Prénom </h3>
+      <div class="input-container" id="input_<%= question %>">
+        <%= f.input :first_name, placeholder: "Martin", label: false %>
+      </div>
+      <button type="button" onClick="document.getElementById('question_<%= question + 1 %>').scrollIntoView();" >
+        <div class="ok">
+          OK <i class="fa fa-check"></i>
+        </div>
+        <small>ou <strong>ENTREE</strong></small>
+      </button>
+    </div>
+  </div>
+
+
+  <div id="question_<%= question += 1 %>" class="question-container">
+    <div class="question-content">
+      <h3><span>2</span> <i class="fa fa-chevron-right"></i> Nom </h3>
+      <div class="input-container" id="input_<%= question %>">
+        <%= f.input :last_name, placeholder: "Dupont", label: false %>
+      </div>
+      <button type="button" onClick="document.getElementById('question_<%= question + 1 %>').scrollIntoView();">
+        <div class="ok">
+          OK <i class="fa fa-check"></i>
+        </div>
+        <small>ou <strong>ENTREE</strong></small>
+      </button>
+    </div>
+  </div>
+
+
+  <div id="question_<%= question += 1 %>" class="question-container">
+    <div class="question-content">
+      <h3><span>3</span> <i class="fa fa-chevron-right"></i> address</h3>
+      <div class="input-container" id="input_<%= question %>">
+        <%= f.input :address, label: false, placeholder: '10, rue du chemin vert 56170 Stains' %>
+      </div>
+      <button type="button" onClick="document.getElementById('question_<%= question + 1 %>').scrollIntoView();">
+        <div class="ok">
+          OK <i class="fa fa-check"></i>
+        </div>
+        <small>ou <strong>ENTREE</strong></small>
+      </button>
+    </div>
+  </div>
+
+  <div id="question_<%= question += 1 %>" class="question-container">
+    <div class="question-content">
+      <h3><span>4</span> <i class="fa fa-chevron-right"></i> Téléphone </h3>
+      <div class="input-container" id="input_<%= question %>">
+        <%= f.input :phone_number, label: false, placeholder: '0618434343' %>
+      </div>
+      <button type="button" onClick="document.getElementById('question_<%= question + 1 %>').scrollIntoView();">
+        <div class="ok">
+          OK <i class="fa fa-check"></i>
+        </div>
+        <small>ou <strong>ENTREE</strong></small>
+      </button>
+    </div>
+  </div>
+
+
+  <div id="question_<%= question += 1 %>" class="question-container">
+    <div class="question-content">
+      <h3><span>7</span> <i class="fa fa-chevron-right"></i> email </h3>
+      <div class="input-container" id="input_<%= question %>">
+        <%= f.input :email, placeholder: 'jpmartin@gmail.com', label: false %>
+      </div>
+      <button type="button" onClick="document.getElementById('question_<%= question + 1 %>').scrollIntoView();">
+        <div class="ok">
+          OK <i class="fa fa-check"></i>
+        </div>
+        <small>ou <strong>ENTREE</strong></small>
+      </button>
+    </div>
+  </div>
+
+  <div class="ok">
+    <%= f.submit "Trouver les meilleurs pros!", class: "main-cta" %>
+  </div>
+
+<% end %>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+
+<!-- JS -->
+<% content_for :after_js do %>
+  <script>
+    $(document).ready(function() {
+      $('.input-container').keydown(function(e) {
+        if ( e.which == 13 ) {
+          e.preventDefault();
+          var id = $(this)[0].id;
+          input_id = parseInt(id.substr(id.indexOf("_") + 1));
+          input_id += 1;
+          question = $('#question_'+ input_id);
+          question[0].scrollIntoView();
+          question.find("input").focus();
+        };
+      });
+      $('.all-skills-btn').keydown(function(e) {
+        if ( e.which == 13 ) {
+          e.preventDefault();
+          var id = $(this)[0].id;
+          input_id = parseInt(id.substr(id.indexOf("_") + 1));
+          input_id += 1;
+          document.getElementById('question_'+ input_id).scrollIntoView();
+        };
+      });
+        $('.selected').keydown(function(e) {
+        if ( e.which == 13 ) {
+          e.preventDefault();
+          var id = $(this)[0].id;
+          input_id = parseInt(id.substr(id.indexOf("_") + 1));
+          input_id += 1;
+          document.getElementById('question_'+ input_id).scrollIntoView();
+        };
+      });
+      $(window).scroll(function(e) {
+        var bodyHeight = $('body').height();
+        var heightLimit = bodyHeight * 90 / 100
+        var progressBar = $('.progress-bar');
+        var progressPercent = $('#progress-percent');
+        var stepHeight = (bodyHeight - 392) / 14
+        var theWidth = 100 * 1 / 14;
+        var stepNb = $(this).scrollTop() / stepHeight;
+        var newPercent = Math.round(theWidth * stepNb);
+        if ($(this).scrollTop() >= heightLimit) {
+          progressPercent.text(100);
+          progressBar.css({ "width": '100%'});
+        } else {
+          progressPercent.text(newPercent);
+          progressBar.css({ "width": newPercent + '%'});
+        };
+      });
+    $( ".btn-works" ).click(function() {
+      $( this ).toggleClass('btn-works-active');
+    });
+    });
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyA8N6kvuOqcbNYUEX8NTStWtejn6fix2PE"></script>
+<% end %>
+
+<%#= f.input :photos, as: :attachinary %>
+
+

@@ -1,23 +1,34 @@
 $(document).ready(function() {
+  var office_address = $('#user_address').get(0);
 
-  var user_address = $('#user_address').get(0);
-
-  if (user_address) {
-    var autocomplete = new google.maps.places.Autocomplete(user_address, { types: ['geocode'] });
+  if (office_address) {
+    var autocomplete = new google.maps.places.Autocomplete(office_address, { types: ['geocode'] });
     google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
-    google.maps.event.addDomListener(user_address, 'keydown', function(e) {
+    google.maps.event.addDomListener(office_address, 'keydown', function(e) {
       if (e.keyCode == 13) {
         e.preventDefault(); // Do not submit the form on Enter.
       }
     });
   }
 
-    var client_address = $('#client_address').get(0);
+    var works_address = $('#customer_works_address').get(0);
 
-  if (client_address) {
-    var autocomplete = new google.maps.places.Autocomplete(client_address, { types: ['geocode'] });
+  if (works_address) {
+    var autocomplete = new google.maps.places.Autocomplete(works_address, { types: ['geocode'] });
     google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
-    google.maps.event.addDomListener(client_address, 'keydown', function(e) {
+    google.maps.event.addDomListener(works_address, 'keydown', function(e) {
+      if (e.keyCode == 13) {
+        e.preventDefault(); // Do not submit the form on Enter.
+      }
+    });
+  }
+
+    var pro_address = $('#pro_address').get(0);
+
+  if (pro_address) {
+    var autocomplete = new google.maps.places.Autocomplete(pro_address, { types: ['geocode'] });
+    google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
+    google.maps.event.addDomListener(works_address, 'keydown', function(e) {
       if (e.keyCode == 13) {
         e.preventDefault(); // Do not submit the form on Enter.
       }
@@ -30,11 +41,11 @@ function onPlaceChanged() {
   var place = this.getPlace();
   var components = getAddressComponents(place);
 
-  $('#user_address').trigger('blur').val(components.address);
-  $('#user_zip_code').val(components.zip_code);
-  $('#user_city').val(components.city);
+  $('#office_address').trigger('blur').val(components.address);
+  $('#office_zip_code').val(components.zip_code);
+  $('#office_city').val(components.city);
   if (components.country_code) {
-    $('#user_country').val(components.country_code);
+    $('#office_country').val(components.country_code);
   }
 }
 
@@ -67,6 +78,6 @@ function getAddressComponents(place) {
   }
 
   return {
-    address: street_number + ' ' + route + ' ' + zip_code + ' ' + city + ' ' + country_code
+    office_address: street_number + ' ' + route + ' ' + zip_code + ' ' + city + ' ' + country_code
   };
 }

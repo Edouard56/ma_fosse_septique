@@ -1,7 +1,7 @@
+<h1>INDEX</h1>
 
-<h1>Il y a <%= @available_users.count %> professionnels qui correspondent à votre recherche</h1>
 
-<% @available_users.each do |user| %>
+<% @users.each do |user| %>
   <p>société : <%= user.company %></p>
   <p>position : <%= user.position %></p>
   <p>prénom : <%= user.last_name %></p>
@@ -32,8 +32,4 @@
       });
     });
   <% end %>
-<% end %>
-
-<%= content_for(:after_js) do %>
-  <script src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyC0J8yKgp1HNvXsiK1_H_PCAz2f-D9Zq4Y"></script>
 <% end %>

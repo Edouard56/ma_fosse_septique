@@ -1,0 +1,7 @@
+  <h3><%= user.first_name %></h3>
+
+  <div class="box-container">
+    <p><strong>Lieu: </strong><%= user.address %></p>
+    <p>Distance: <%= @client.distance_to(user.address).to_i %> km</p>
+    <%= link_to '', user_path(user), class: "card-link" %>
+  </div>

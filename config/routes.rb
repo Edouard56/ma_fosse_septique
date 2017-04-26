@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [ :index, :show ]
 
-
+  mount Attachinary::Engine => "/attachinary"
   # création de la route formulaire (a faire)
 
 end

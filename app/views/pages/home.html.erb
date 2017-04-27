@@ -1,16 +1,32 @@
 
+<h1 class="text-center">Bienvenue chez belles toitures</h1>
+
 <div class="container">
-  <div class="row text-center">
-    <div class="col-xs-12">
-      <h1>Pages#home</h1>
-      <p>Find me in app/views/pages/home.html.erb</p>
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3">
+
+      <%= simple_form_for(@client) do |f| %>
+        <%= f.input :address, placeholder: "Lieu des travaux" %>
+        <%= f.button :submit, "Rechercher des pros" %>
+      <% end %>
+
+      <br>
+      <%= link_to users_path, class: "main-cta" do %>
+        <span>Liste des pros</span>
+      <% end %>
+      <br>
+      <br>
       <%= link_to edit_user_registration_path, class: "main-cta" do %>
-  <span>edit pro</span>
-<% end %>
-<br><br>
+        <span>edit pro</span>
+      <% end %>
+      <br>
+      <br>
       <%= link_to new_client_path, class: "main-cta" do %>
-        <span>Index</span>
+        <span>Rechercher des pros près de chez moi</span>
       <% end %>
     </div>
   </div>
 </div>
+
+
+

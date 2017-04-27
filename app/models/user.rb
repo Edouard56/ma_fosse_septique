@@ -20,6 +20,6 @@ class User < ApplicationRecord
   validates :address, presence: :true
   validates :mobile_phone, presence: :true
   # validates :description, presence: :true
-  # validates :radius, presence: :true
+  validates :radius, presence: :true
 
 end

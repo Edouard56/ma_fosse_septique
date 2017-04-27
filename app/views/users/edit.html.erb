@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      <h1 class="title-lv1 border-bottom margin-bottom">Informations personnelles</h1>
+      <div class="profile-form-container form-inline">
+        <%= simple_form_for (@user) do |f| %>
+            <%= f.input :first_name, label_html: {class: "label-profile-form"}, input_html: {class: "input-profile-form"}, label: "Prénom" %>
+            <%= f.input :last_name, label_html: {class: "label-profile-form"}, input_html: {class: "input-profile-form"}, label: "Nom" %>
+            <%= f.input :position, label_html: {class: "label-profile-form"}, input_html: {class: "input-profile-form"}, label: "Position" %>
+            <%= f.input :email, label_html: {class: "label-profile-form"}, input_html: {class: "input-profile-form"}, required: true, autofocus: true %>
+            <%= f.input :office_phone, label_html: {class: "label-profile-form"}, input_html: {class: "input-profile-form"}, label: "Tel bureau" %>
+            <%= f.input :mobile_phone, label_html: {class: "label-profile-form"}, input_html: {class: "input-profile-form"}, label: "Portable" %>
+
+      </div>
+    </div>
+
+
+    <div class="col-xs-12 col-md-6">
+
+      <h1 class="title-lv1 border-bottom margin-bottom">Informations de la société</h1>
+      <div class="profile-form-container form-inline">
+         <%= f.input :company, label_html: {class: "label-profile-form"}, input_html: {class: "input-profile-form"}, label: "société" %>
+          <%= f.input :radius, label_html: {class: "label-profile-form"}, input_html: {class: "input-profile-form"}, label: "rayon d'activité" %>
+
+          <%= f.input :description, label_html: {class: "label-profile-form"}, input_html: {class: "description-input-profile-form"}, label: "description" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      <h1 class="title-lv1 border-bottom margin-bottom">Visuels entreprises</h1>
+        <div class="profile-form-container form-inline">
+          <%= f.input :photo_company_logo, as: :attachinary, label_html: {class: "attachinary_container"}, input_html: {class: "input-profile-form"}, label: "logo" %>
+          <%= f.input :photo_presentation, as: :attachinary %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <h1 class="title-lv1 border-bottom margin-bottom">Visuels chantiers</h1>
+        <div class="profile-form-container form-inline">
+          <%= f.input :photos_projet_1, as: :attachinary %>
+          <%= f.input :photos_projet_2, as: :attachinary %>
+          <%= f.input :photos_projet_3, as: :attachinary %>
+          <%= f.input :photos_projet_4, as: :attachinary %>
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+          <div class="profile-form-container form-inline">
+            <%= f.submit "Mettre a jour", class: "btn btn-primary" %>
+          <% end %>
+        </div>
+    </div>
+  </div>
+</div>
+

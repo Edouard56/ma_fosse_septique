@@ -5,5 +5,8 @@ Rails.application.routes.draw do
   resources :users
   resources :clients, only: [ :new, :create, :show ]
   mount Attachinary::Engine => "/attachinary"
-  # création de la route formulaire (a faire)
+
+  # routes articles
+  get 'quel-choix-pour-le-particulier-entre-assainissement-individuel-ou-collectif', to: 'articles#choix_assainissement_individuel_ou_collectif'
+
 end

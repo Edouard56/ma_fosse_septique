@@ -1,0 +1,181 @@
+// CSS de la partiak "article_left_navigation"
+
+.left-navigation-container {
+  border: solid 1px $light-grey;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.2;
+  color: $dark-grey;
+  background-color: white;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.left-navigation-title {
+  color: $dark-grey;
+  display: inline-block;
+  font-size: 1em;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  width: 100%;
+  font-size: 24px;
+}
+
+.all-categories-articles {
+  margin-left: 10px;
+  line-height: 2;
+  margin-bottom: 40px;
+
+}
+
+.left-navigation-call-to-action {
+  border-top: 1px solid $medium-grey;
+  padding-bottom: 50px;
+  padding-top: 50px;
+
+  h3 {
+    font-size: 24px;
+    color: $dark-grey;
+    margin-top: 20px;
+  }
+
+  h4 {
+    color: $yellow;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  p {
+    text-align: justify;
+    margin-top: 20px;
+  }
+}
+
+.left-navigation-card-call-to-action {
+  padding: 5px;
+  background-color: $light-grey;
+  margin-bottom: 10px;
+  padding-bottom: 15px;
+}
+
+.left-navigation-button-call-to-action {
+  margin-top: 30px;
+}
+
+
+//
+//
+// CSS de la partie Article
+
+.article-page {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  h1 {
+    color: $dark-grey;
+    margin-top: 35px;
+  }
+
+  h3 {
+    color: $dark-grey;
+    margin-top: 35px;
+  }
+
+  h4 {
+    text-align: right;
+    color: $yellow;
+    margin-top: 35px;
+  }
+
+  p {
+    text-align: justify;
+    color: $black;
+    font-size: 1em;
+    line-height: 1.6em;
+    margin-top: 30px;
+   }
+
+  .italic {
+    font-style: italic;
+  }
+
+  .img-responsive {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    width: 100% \9;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.container-extract-article {
+  background-color: $yellow;
+  border: 1px solid $medium-grey;
+  border-radius: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 60px;
+  margin-right: 60px;
+
+  p  {
+    font-size: 0.9em;
+    line-height: 1.9em;
+  }
+}
+
+// css de la partie navigation du bas
+
+.article_bottom_navigation {
+  border-top: 1px solid $medium-grey;
+  padding: 0 0 50px;
+
+  h2 {
+   color: $yellow;
+   margin: 20px;
+  }
+
+}
+
+.article-card {
+  background: $light-grey;
+  width: 100%;
+  padding: 20px;
+
+  h6 {
+    text-align: center;
+    color: $dark-grey;
+    font-size: 1em;
+    line-height: 1.6em;
+    margin-bottom: 10px;
+    margin-top: 0px;
+  }
+}
+
+.article-card:hover {
+  background: $medium-grey;
+  text-decoration: none;
+  color: white;
+}
+
+.article-content {
+
+  .img-card {
+    width: 100%;
+    background: transparent;
+    color: $yellow;
+    text-decoration: none;
+    vertical-align: middle;
+  }
+
+  p {
+    color: $black;
+    font-size: 0.8em;
+    margin: 15px 0 5px;
+    text-align: justify;
+  }
+}

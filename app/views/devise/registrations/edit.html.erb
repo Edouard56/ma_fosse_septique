@@ -2,7 +2,9 @@
 
 <div class="container">
 
-  <h2>Edit <%= resource_name.to_s.humanize %></h2>
+  <!-- <h2>Edit <%= resource_name.to_s.humanize %></h2> -->
+
+  <h2 class="text-center" >Modifier mes informations</h2>
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= f.error_notification %>
@@ -34,7 +36,7 @@
       <div class="profile-form-container form-inline">
          <%= f.input :company, label_html: {class: "label-profile-form"}, input_html: {class: "input-profile-form"}, label: "société" %>
           <%= f.input :address, label_html: {class: "label-profile-form"}, input_html: {class: "input-profile-form"}, label: "adresse" %>
-          <%= f.input :radius, label_html: {class: "label-profile-form"}, input_html: {class: "input-profile-form"}, label: "rayon d'activité" %>
+          <%= f.input :radius, label_html: {class: "label-profile-form"}, input_html: {class: "input-profile-form"}, label: "rayon d'activité (km)" %>
 
           <%= f.input :description, label_html: {class: "label-profile-form"}, input_html: {class: "description-input-profile-form"}, label: "description" %>
       </div>
@@ -59,7 +61,7 @@
     <div class="col-xs-12 col-md-6">
       <h1 class="title-lv1 border-bottom margin-bottom">Enregistrer mes modifications</h1>
       <div class="profile-form-container form-inline">
-        <p>Merci de recomposer votre mot de passe afin de sauvergarder vos modifications</p>
+        <p>Merci de recomposer votre mot de passe afin de sauvegarder vos modifications</p>
         <br>
         <%= f.input :current_password, required: true, label_html: {class: "label-profile-form"}, input_html: {class: "input-profile-form"}, label: "mdp a retaper" %>
         <div class="form-actions text-center">
@@ -89,7 +91,8 @@
     <div class="col-xs-12 col-md-6">
       <h1 class="title-lv1 border-bottom margin-bottom">Fermer mon compte</h1>
       <div class="profile-form-container form-inline">
-        <p>Mécontent? <%= link_to "Fermer mon compte", registration_path(resource_name), data: { confirm: "Etes-vous sur?" }, method: :delete %></p>
+        <p>Mécontent? </p>
+        <p><%= link_to "Fermer mon compte", registration_path(resource_name), data: { confirm: "Etes-vous sur?" }, method: :delete %></p>
         <%= link_to "Retourner à l'accueil", :back %>
       </div>
     </div>

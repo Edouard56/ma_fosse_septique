@@ -1,0 +1,78 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-9">
+      <div class='article-page'>
+        <h4>Catégorie : L'assainissement individuel</h4>
+        <h1>Quel choix pour le particulier entre assainissement individuel ou collectif ?</h1>
+
+        <p class="italic">Le choix du type d’assainissement, collectif ou individuel, est limité… Et ne dépend généralement pas du propriétaire d’une maison mais de la collectivité qui choisit de relier, ou non, au système d’assainissement collectif !</p>
+
+
+        <p>Si, dans les zones urbaines fortement peuplées l’assainissement collectif, composé de canalisations et d’une station d’épuration, s’impose financièrement et techniquement, ce n’est pas le cas pour certaines zones rurales ou péri-urbaines. Lorsque la densité d’habitants diminue, le coût augmente pour une solution collective et l’assainissement individuel devient plus pertinente, financièrement, techniquement et écologiquement.</p>
+
+        <%= image_tag "fosse_1.jpg", class: "img-responsive" %>
+        <p class="italic bold">Installation d'une fosse septique</p>
+
+        <p>Du point de vue des collectivités locales, l’assainissement individuel est donc un choix raisonné qui peut être justifié par des considérations techniques, mais également et surtout par des raisons économiques et par la bonne gestion des fonds publics. Dans une même commune, les deux types d’assainissements ne sont pas exclusifs l’un de l’autre mais complémentaires et la définition de leurs champs d’applications respectifs résulte d’une étude au cas par cas.</p>
+
+        <div class="container-extract-article">
+          <p>En 2016, l'assainissement individuel concerne <strong>5 millions de foyers</strong> et <strong>12 millions de personnes</strong> en France. Bien réalisé, il ne coûte pas plus cher que l'assainissement collectif (tout à l'égoût).</p>
+        </div>
+
+        <p>Si de nombreuses appréhensions subsistent encore lors de la décision d’installation d’une unité d’assainissement individuel, celles-ci peuvent et doivent être levées afin de permettre à 12 millions de personnes et à 5 millions de foyers de vivre correctement leur vie d’usager, entre le devoir de respecter des normes d’hygiènes et environnementales et le droit à disposer d’un moyen de traitement des eaux usées qui soit financièrement équitable.</p>
+
+        <p>L’assainissement individuel ne doit pas être considéré comme une solution provisoire ou « faute de mieux », c’est une solution définitive qui peut être supérieure dans bien des domaines à l’assainissement collectif !</p>
+      </div>
+    </div>
+    <%= render 'shared/article_left_navigation' %>
+  </div>
+</div>
+
+<div class="container no-padding">
+  <div class="article_bottom_navigation">
+    <div class="row">
+      <h2 class="text-center">Articles de la même catégorie</h2>
+
+      <div class="col-md-4 col-sm-4">
+        <div class="article-card">
+          <%= link_to root_path do %>
+            <h6 class="text-center"> De quoi se compose un assainissement individuel type ?</h6>
+            <div class="article-content">
+              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <p>L’assainissement individuel type se compose ordinairement d’une fosse septique et d’un épandage souterrain.</p>
+              <%= link_to "Lire la suite", root_path, class: "yellow-link"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-4">
+        <div class="article-card">
+          <%= link_to root_path do %>
+            <h6 class="text-center"> Quel est le coût global d’une fosse septique ? Une équation difficile</h6>
+            <div class="article-content">
+              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <p>Le coût d’un assainissement individuel est généralement compris entre 5000 € et 15 000 € mais peut varier. </p>
+              <%= link_to "Lire la suite", root_path, class: "yellow-link"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-4">
+        <div class="article-card">
+          <%= link_to root_path do %>
+            <h6 class="text-center"> Quelles sont les principales contraintes de l’assainissement individuel ?</h6>
+            <div class="article-content">
+              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <p>Une infiltration efficace dépend de la surface du terrain et de sa perméabilité mais aussi d'autres facteurs.</p>
+              <%= link_to "Lire la suite", root_path, class: "yellow-link"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

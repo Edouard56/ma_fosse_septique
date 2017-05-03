@@ -1,0 +1,82 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-9">
+      <div class='article-page'>
+        <h4>Catégorie : La fosse septique</h4>
+        <h1>Quel est le coût global d’une fosse septique ?</h1>
+        <span>1 mai 2017</span>
+
+        <p class="italic">Le calcul du coût d'une fosse septique doit se faire en prenant en compte le coût d'achat (matériel et main d'oeuvre), le coût d'entretien annuel et enfin la durée de vie de l'installation</p>
+
+        <p><strong>À l’achat :</strong></p>
+        <p>Le coût d’un assainissement individuel est généralement compris entre 5000 € et 15 000 €. Il varie dans de très larges proportions en fonction des qualités d’absorption du terrain et de la surface d’épandage. Les coûts les plus faibles correspondent à un terrain favorable et pour une installation ayant lieu en même temps que la construction du logement. Les coûts les plus élevées correspondent à un terrain défavorable et à une mise en place auprès ‘un logement ancien nécessitant une remise en état du terrain après les travaux.</p>
+
+        <%= image_tag "fosse_1.jpg", class: "img-responsive" %>
+        <p class="italic bold">Quelques repères pour les prix :</p>
+
+        <p><strong>À l’entretien :</strong></p>
+        <p>Bien réalisé, un système d’assainissement individuel n’entraîne que de faibles coûts d’entretien.</p>
+        <p>Les dépenses sont limitées à :</p>
+        <ul>
+          <li>la vidange de la fosse septique tous les  2 à 5 ans : entre 100  et 300 € selon la facilité d’accès, la contenance… <%= link_to "+ d’infos sur la vidange", root_path, class: "yellow-link"%></li>
+          <li>l’inspection et le contrôle des SPANC qui a lieu tous les 1 à 3 ans avec un coût compris entre 100 et 300 € (+ d’infos sur les SPANC)</li>
+          <li>l’achat de produits d’entretiens pour la fosse septique</li>
+        </ul>
+
+        <p><strong>Durée de vie :</strong></p>
+        <p>On peut compter un amortissement d’environ 20 ans pour une fosse septique. Bien réalisée et adaptée aux usages pour laquelle elle a été conçue, elle devrait bien sûr durer plus longtemps. Idem pour le système d’épandage souterrain ou certaines pièces d’usures peuvent être contrôlées et changées sans avoir à refaire l’intégralité du dispositif.</p>
+        <p>L’évolution des normes environnementales doit également être prise en compte par le particulier. Si l’anticipation des règles environnementales est impossible pour celui-ci, une période de 20 ans paraît être raisonnable pour anticiper tout changement de norme aboutissant à des travaux de mise aux normes et correspond à cette durée d’amortissement.</p>
+      </div>
+    </div>
+    <%= render 'shared/article_left_navigation' %>
+  </div>
+</div>
+
+<div class="container no-padding">
+  <div class="article_bottom_navigation">
+    <div class="row">
+      <h2 class="text-center">Articles de la même catégorie</h2>
+
+      <div class="col-md-4 col-sm-4">
+        <div class="article-card">
+          <%= link_to root_path do %>
+            <h6 class="text-center"> Quel choix entre assainissement individuel ou collectif ?</h6>
+            <div class="article-content">
+              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <p>Le choix du type d’assainissement, collectif ou individuel, dépend  de la collectivité locale...</p>
+              <%= link_to "Lire la suite", root_path, class: "yellow-link"%>
+            </div>
+            <% end %>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-4">
+        <div class="article-card">
+          <%= link_to root_path do %>
+            <h6 class="text-center"> De quoi se compose un assainissement individuel type ?</h6>
+            <div class="article-content">
+              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <p>L’assainissement individuel type se compose ordinairement d’une fosse septique et d’un épandage souterrain.</p>
+              <%= link_to "Lire la suite", root_path, class: "yellow-link"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+
+      <div class="col-md-4 col-sm-4">
+        <div class="article-card">
+          <%= link_to root_path do %>
+            <h6 class="text-center"> Les principales contraintes de l’assainissement individuel ?</h6>
+            <div class="article-content">
+              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <p>Une infiltration efficace dépend de la surface du terrain et de sa perméabilité mais aussi d'autres facteurs.</p>
+              <%= link_to "Lire la suite", root_path, class: "yellow-link"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

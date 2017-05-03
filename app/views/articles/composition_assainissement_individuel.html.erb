@@ -1,0 +1,79 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-9">
+      <div class='article-page'>
+        <h4>Catégorie : La fosse septique</h4>
+        <h1>De quoi se compose un assainissement individuel type ?</h1>
+        <span>24 avril 2017</span>
+
+        <p class="italic">L’assainissement individuel type se compose ordinairement d’une fosse septique et d’un épandage souterrain.</p>
+
+
+        <p>La fosse septique peut-être en béton ou en plastique et sa contenance varie généralement de 3 à 20 mètres cubes. Elle est située la plupart du temps à proximité immédiate de la maison et a pour but d’assurer le traitement préalable des eaux usées avant leur admission dans l’épandage souterrain. La fosse septique reçoit la totalité des eaux usées qui se composent des eaux-vannes provenant des toilettes et les eaux ménagères issues des autres usages.</p>
+
+        <%= image_tag "fosse_1.jpg", class: "img-responsive" %>
+        <p class="italic bold">Installation d'une fosse septique</p>
+
+        <p>L’épandage souterrain est constitué de canalisation de dispersion placées dans des tranchées, celles-ci permettent l’infiltration lente des eaux sur une grande surface et leur épuration par les bactéries du sol.</p>
+
+        <p>L’épandage souterrain a un double rôle :
+          <ul>
+            <li>il permet d’évacuer les eaux sorties de la fosse septique dans le sous-sol par une infiltration.</li>
+            <li>il complète et termine le processus d’épuration initié dans la fosse septique.</li>
+          </ul>
+        L’épandage permet ainsi d’éviter les risques de pollution des eaux souterraines.</p>
+
+      </div>
+    </div>
+    <%= render 'shared/article_left_navigation' %>
+  </div>
+</div>
+
+<div class="container no-padding">
+  <div class="article_bottom_navigation">
+    <div class="row">
+      <h2 class="text-center">Articles de la même catégorie</h2>
+
+      <div class="col-md-4 col-sm-4">
+        <div class="article-card">
+          <%= link_to root_path do %>
+            <h6 class="text-center"> Quel choix entre assainissement individuel ou collectif ?</h6>
+            <div class="article-content">
+              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <p>Le choix du type d’assainissement, collectif ou individuel, dépend  de la collectivité locale...</p>
+              <%= link_to "Lire la suite", root_path, class: "yellow-link"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-4">
+        <div class="article-card">
+          <%= link_to root_path do %>
+            <h6 class="text-center"> Quel est le coût global d’une fosse septique ?</h6>
+            <div class="article-content">
+              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <p>Le coût d’un assainissement individuel est généralement compris entre 5000 € et 15 000 € mais peut varier. </p>
+              <%= link_to "Lire la suite", root_path, class: "yellow-link"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-4">
+        <div class="article-card">
+          <%= link_to root_path do %>
+            <h6 class="text-center"> Les principales contraintes de l’assainissement individuel</h6>
+            <div class="article-content">
+              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <p>Une infiltration efficace dépend de la surface du terrain et de sa perméabilité mais aussi d'autres facteurs.</p>
+              <%= link_to "Lire la suite", root_path, class: "yellow-link"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

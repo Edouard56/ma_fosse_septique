@@ -7,6 +7,13 @@ Rails.application.routes.draw do
   mount Attachinary::Engine => "/attachinary"
 
   # routes articles
-  get 'quel-choix-pour-le-particulier-entre-assainissement-individuel-ou-collectif', to: 'articles#choix_assainissement_individuel_ou_collectif'
+  get 'magazine', to: 'articles#index'
 
+  get 'quel-choix-pour-le-particulier-entre-assainissement-individuel-ou-collectif', to: 'articles#choix_assainissement_individuel_ou_collectif'
+  get 'de-quoi-se-compose-un-assainissement-individuel-type', to: 'articles#composition_assainissement_individuel'
+  get 'quel-est-le-cout-global-d-une-fosse-septique', to: 'articles#cout_fosse_septique'
+  get 'quelles-sont-les-principales-contraintes-de-l-assainissement-individuel', to:'articles#contraintes_assainissement_individuel'
+  get 'comment-fonctionne-une-fosse-septique', to: 'articles#fonctionnement_fosse_septique'
+  get 'comment-fonctionne-l-epandage-souterrain', to: 'articles#fonctionnement_epandage_souterrain'
+  get 'comprendre-l-assainissement-individuel', to: 'articles#comprendre_assainissement_individuel'
 end

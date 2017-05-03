@@ -1,0 +1,89 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-9">
+      <div class='article-page'>
+        <h4>Catégorie : La fosse septique</h4>
+        <h1>Comment fonctionne l’épandage souterrain ?</h1>
+        <span>11 mars 2017</span>
+
+        <p class="italic">L’épandage souterrain permet de finaliser le processus d’assainissement en rejetant les effluents qui vont être dégradés par les bactéries présentes dans le sol. Bien calibré, il n’a aucun impact sur l’environnement et est indécelable pour les habitants.</p>
+
+        <p><strong>Le sol achève l’épuration</strong></p>
+        <p>Le sol possède toutes les capacités pour achever l’épuration commencée dans la fosse septique, plus vite et plus complètement qu’une station d’épuration. Jusqu’à une certaine dose, les effluents issus de la fosse septique ne constituent pas une pollution pour le sol. Les bactéries présentes dans le sol sont plus nombreuses en surface. Il faut donc rester le plus près possible de la surface qui est la partie la plus active.</p>
+
+
+        <%= image_tag "fosse_1.jpg", class: "img-responsive" %>
+        <p class="italic bold">Trouver un graphique d'épandage</p>
+
+        <p><strong>Une épuration microbienne efficace</strong></p>
+        <p>Les bactéries dangereuses sont retenues dans le sol par les particules d’argiles et d’humus qui font office de filtre puis elles sont éliminées par les bactéries présentes dans le sol. Au fur et à mesure de l’infiltration, un colmatage se crée dans la surface d’infiltration. Ce colmatage est naturel et renforce même les capacités de traitement du sol puisque les bactéries épuratrices se nourrissant de la matière organique se développent en quantité.</p>
+
+        <div class="container-extract-article">
+          <p>En 2016, l'assainissement individuel concerne <strong>5 millions de foyers</strong> et <strong>12 millions de personnes</strong> en France. Bien réalisé, il ne coûte pas plus cher que l'assainissement collectif (tout à l'égoût).</p>
+        </div>
+
+        <p><strong>La clé de l’efficacité : une surface d’épandage souterrain suffisante</strong></p>
+        <p>L’efficacité de l’épandage souterrain dépend de l’équilibre entre la capacité de débit d’infiltration de l’épandage et celui des eaux de la fosse septique qui lui sont apportées. Avec un dispositif normalement dimensionné, ces débits sont faibles et permettent une vitesse de filtration très lente (10 l/m2 engendre une hauteur de 1 cm d’eau dans le sol).</p>
+
+        <p><strong>Le paramètre clé à bien connaître : l’humidité du sol</strong></p>
+        <p>Les caractéristiques physiques du sol influencent la capacité de celui-ci à bien évacuer l’eau  (de plus en plus propre à mesure qu’elle descend) vers les couches plus profondes. S’il existe une nappe d’eau proche de la surface, alors le sol sature et n’absorbe plus le liquide issue de l’épandage qui peut remonter en cas de fortes précipitations. A l’inverse, l’eau est aspirée facilement dans un sol sec et s’évacue régulièrement.</p>
+        <p>En résumé, 3 conditions à un bon fonctionnement de l’épandage : </p>
+        <ul>
+          <li>Les effluents sortants de la fosse septiques ne doivent pas contenir trop de matières.</li>
+          <li>Une surface d’épandage suffisante garantit une vitesse d’infiltration faible.</li>
+          <li>Le sol ne doit pas être saturé en eau pendant de longues périodes.</li>
+        </ul>
+      </div>
+    </div>
+    <%= render 'shared/article_left_navigation' %>
+  </div>
+</div>
+
+<div class="container no-padding">
+  <div class="article_bottom_navigation">
+    <div class="row">
+      <h2 class="text-center">Articles de la même catégorie</h2>
+
+      <div class="col-md-4 col-sm-4">
+        <div class="article-card">
+          <%= link_to root_path do %>
+            <h6 class="text-center"> De quoi se compose un assainissement individuel type ?</h6>
+            <div class="article-content">
+              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <p>L’assainissement individuel type se compose ordinairement d’une fosse septique et d’un épandage souterrain.</p>
+              <%= link_to "Lire la suite", root_path, class: "yellow-link"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-4">
+        <div class="article-card">
+          <%= link_to root_path do %>
+            <h6 class="text-center"> Quel est le coût global d’une fosse septique ?</h6>
+            <div class="article-content">
+              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <p>Le coût d’un assainissement individuel est généralement compris entre 5000 € et 15 000 € mais peut varier. </p>
+              <%= link_to "Lire la suite", root_path, class: "yellow-link"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-4">
+        <div class="article-card">
+          <%= link_to root_path do %>
+            <h6 class="text-center">Les principales contraintes de l’assainissement individuel</h6>
+            <div class="article-content">
+              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <p>Une infiltration efficace dépend de la surface du terrain et de sa perméabilité mais aussi d'autres facteurs.</p>
+              <%= link_to "Lire la suite", root_path, class: "yellow-link"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

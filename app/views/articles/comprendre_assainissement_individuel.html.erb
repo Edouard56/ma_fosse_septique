@@ -1,0 +1,131 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-9">
+      <div class='article-page'>
+        <h4>Catégorie : La fosse septique</h4>
+        <h1>Comprendre l'assainissement individuel</h1>
+        <span>1 février 2017</span>
+
+        <p class="italic">résumé bien comprendre</p>
+
+
+        <p>1. le choix <%= link_to "lien vers page choix", quel_choix_pour_le_particulier_entre_assainissement_individuel_ou_collectif_path, class: "yellow-link"%></p>
+
+
+        <%= image_tag "fosse_1.jpg", class: "img-responsive" %>
+        <p class="italic bold">Installation d'une fosse septique</p>
+
+        <p>2. La composition d'une installation<%= link_to "lien vers page composition", de_quoi_se_compose_un_assainissement_individuel_type_path, class: "yellow-link"%></p>
+
+        <div class="container-extract-article">
+          <p>En 2016, l'assainissement individuel concerne <strong>5 millions de foyers</strong> et <strong>12 millions de personnes</strong> en France. Bien réalisé, il ne coûte pas plus cher que l'assainissement collectif (tout à l'égoût).</p>
+        </div>
+
+        <p>3. cout moyen<%= link_to "lien vers page cout", quel_est_le_cout_global_d_une_fosse_septique_path, class: "yellow-link"%></p>
+
+        <p>4. contraintes<%= link_to "lien vers page contraintes", quelles_sont_les_principales_contraintes_de_l_assainissement_individuel_path, class: "yellow-link"%></p>
+
+        <p>5. fonctionnement<%= link_to "lien vers page focntionnement", comment_fonctionne_une_fosse_septique_path, class: "yellow-link"%></p>
+        <p>6. fonctionnement épandage <%= link_to "lien vers page focntionnement", comment_fonctionne_l_epandage_souterrain_path, class: "yellow-link"%></p>
+      </div>
+    </div>
+    <%= render 'shared/article_left_navigation' %>
+  </div>
+</div>
+
+<div class="container no-padding">
+  <div class="article_bottom_navigation">
+    <div class="row">
+      <h2 class="text-center">Tous les articles de la catégorie</h2>
+
+      <!-- choix assainissment individuel -->
+      <div class="col-md-4 col-sm-4">
+        <div class="article-card">
+          <%= link_to root_path do %>
+            <h6 class="text-center"> Quel choix entre assainissement individuel ou collectif ?</h6>
+            <div class="article-content">
+              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <p>Le choix du type d’assainissement, collectif ou individuel, dépend  de la collectivité locale...</p>
+              <%= link_to "Lire la suite", root_path, class: "yellow-link"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+      <!-- composition -->
+      <div class="col-md-4 col-sm-4">
+        <div class="article-card">
+          <%= link_to root_path do %>
+            <h6 class="text-center"> De quoi se compose un assainissement individuel type ?</h6>
+            <div class="article-content">
+              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <p>L’assainissement individuel type se compose ordinairement d’une fosse septique et d’un épandage souterrain.</p>
+              <%= link_to "Lire la suite", de_quoi_se_compose_un_assainissement_individuel_type_path, class: "yellow-link"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+      <!-- couts -->
+      <div class="col-md-4 col-sm-4">
+        <div class="article-card">
+          <%= link_to root_path do %>
+            <h6 class="text-center"> Quel est le coût global d’une fosse septique ? </h6>
+            <div class="article-content">
+              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <p>Le coût d’un assainissement individuel est généralement compris entre 5000 € et 15 000 € mais peut varier. </p>
+              <%= link_to "Lire la suite", quel_est_le_cout_global_d_une_fosse_septique_path, class: "yellow-link"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+      <!-- contraintes -->
+      <div class="col-md-4 col-sm-4">
+        <div class="article-card">
+          <%= link_to root_path do %>
+            <h6 class="text-center"> Les principales contraintes de l’assainissement individuel</h6>
+            <div class="article-content">
+              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <p>Les principales contraintes d'efficacité sont la surface du terrain et la perméabilité des sols.</p>
+              <%= link_to "Lire la suite", quelles_sont_les_principales_contraintes_de_l_assainissement_individuel_path, class: "yellow-link"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+    <!-- fonctionnement fosse septique -->
+      <div class="col-md-4 col-sm-4">
+        <div class="article-card">
+          <%= link_to root_path do %>
+            <h6 class="text-center">Comment fonctionne une fosse septique ?</h6>
+            <div class="article-content">
+              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <p>L'installation va traiter les eaux usées gràace à deux phénomènes : la décantation et la dégradation.</p>
+              <%= link_to "Lire la suite", comment_fonctionne_une_fosse_septique_path, class: "yellow-link"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+       <!-- fonctionnement épandage -->
+      <div class="col-md-4 col-sm-4">
+        <div class="article-card">
+          <%= link_to root_path do %>
+            <h6 class="text-center">Comment fonctionne l’épandage souterrain ?</h6>
+            <div class="article-content">
+              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <p>Il finalise le processus en rejetant les effluents qui vont être dégradés par les bactéries du sol.</p>
+              <%= link_to "Lire la suite", comment_fonctionne_l_epandage_souterrain_path, class: "yellow-link"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+

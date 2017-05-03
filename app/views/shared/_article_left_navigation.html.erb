@@ -4,40 +4,96 @@
       <span class="left-navigation-title">
         <h3>Dossiers</h3>
       </span>
-      <p>Retrouvez toutes les infos... </p>
 
-      <%= link_to "L’assainissement individuel", root_path, class: "yellow-link" %>
-      <br>
+      <div class= "left-navigation-category-link">
+        <%= link_to "La fosse septique", comprendre_l_assainissement_individuel_path, class: "yellow-link" %>
+        </div>
+      <ul>
+        <li><%= link_to "Une obligation juridique", quel_choix_pour_le_particulier_entre_assainissement_individuel_ou_collectif_path, class: "small-link" %></li>
+        <li><%= link_to "Schéma d'une installation", de_quoi_se_compose_un_assainissement_individuel_type_path, class: "small-link" %></li>
+        <li><%= link_to "Le fonctionnement", comment_fonctionne_une_fosse_septique_path, class: "small-link" %></li>
+        <li><%= link_to "Le coût d'une installation", quel_est_le_cout_global_d_une_fosse_septique_path, class: "small-link" %></li>
+        <li><%= link_to "Les contraintes", quelles_sont_les_principales_contraintes_de_l_assainissement_individuel_path, class: "small-link" %></li>
+        <li><%= link_to "L'épandage", comment_fonctionne_l_epandage_souterrain_path, class: "small-link" %></li>
+      </ul>
+
+
+
+
+      <div class= "left-navigation-category-link">
       <%= link_to "Les procédés", root_path, class: "yellow-link" %>
-      <br>
+      </div>
+      <ul>
+        <li><%= link_to "La fosse 'toutes eaux'", root_path, class: "small-link" %></li>
+        <li><%= link_to "La micro-station", root_path, class: "small-link" %></li>
+        <li><%= link_to "Le filtre compact", root_path, class: "small-link" %></li>
+        <li><%= link_to "Les filtres naturels", root_path, class: "small-link" %></li>
+        <li><%= link_to "Un peu d'écologie", root_path, class: "small-link" %></li>
+      </ul>
+
+
+
+
+
+      <div class= "left-navigation-category-link">
       <%= link_to "Les acteurs", root_path, class: "yellow-link" %>
-      <br>
-      <%= link_to "Les aides & subventions", root_path, class: "yellow-link" %>
-      <br>
+      </div>
+      <ul>
+        <li><%= link_to "Les collectivités locales", root_path, class: "small-link" %></li>
+        <li><%= link_to "Les SPANC", root_path, class: "small-link" %></li>
+        <li><%= link_to "Les agences de l'eau", root_path, class: "small-link" %></li>
+        <li><%= link_to "Les bureaux d'études", root_path, class: "small-link" %></li>
+        <li><%= link_to "Les entreprises d'installation", root_path, class: "small-link" %></li>
+        <li><%= link_to "Les vendeurs d'installation", root_path, class: "small-link" %></li>
+      </ul>
+
+      <div class= "left-navigation-category-link">
+      <%= link_to "Les aides", root_path, class: "yellow-link" %>
+      </div>
+      <ul>
+        <li><%= link_to "Les aides nationales", root_path, class: "small-link" %></li>
+        <li><%= link_to "Les aides locales", root_path, class: "small-link" %></li>
+        <li><%= link_to "Les prêts bancaires", root_path, class: "small-link" %></li>
+      </ul>
+
+
+      <div class= "left-navigation-category-link">
       <%= link_to "La législation", root_path, class: "yellow-link" %>
-      <br>
-      <%= link_to "L'environnement", root_path, class: "yellow-link" %>
-      <br>
+      </div>
+      <ul>
+        <li><%= link_to "La législation française", root_path, class: "small-link" %></li>
+        <li><%= link_to "Les directives communataires", root_path, class: "small-link" %></li>
+        <li><%= link_to "Faire valoir mes droits", root_path, class: "small-link" %></li>
+      </ul>
+
+
 
       <div class="left-navigation-call-to-action">
         <span class="left-navigation-title">
-          <h3>Nos services</h3>
+          <h3>Services</h3>
         </span>
-          <p>Trouvez les principaux acteurs près de chez vous avec... </p>
-          <h4>L'annuaire</h4>
-        <div class="left-navigation-card-call-to-action">
-          <%= simple_form_for(@client) do |f| %>
-            <%= f.input :address, placeholder: "Lieu des travaux", label: "Entrez votre adresse"  %>
-            <%= f.button :submit, "Rechercher" %>
-           <% end %>
+        <div class= "left-navigation-category-link">
+          <%= link_to "Annuaire", root_path, class: "yellow-link" %>
         </div>
-        <br>
-          <p>Trouvez la bonne solution gràce à notre... </p>
-          <h4>Simulateur</h4>
+          <p>Trouvez les principaux acteurs près de chez vous </p>
 
-          <div class= "left-navigation-button-call-to-action text-center">
-            <%= link_to "Commencer", root_path, class: "main-cta"%>
+        <%= simple_form_for(@client) do |f| %>
+          <%= f.input :address, placeholder: "1, rue des champs 69900", label: "Entrez votre adresse"  %>
+          <div class= "left-navigation-button-call-to-action">
+            <%= f.button :submit, "Annuaire", class: "main-cta" %>
           </div>
+         <% end %>
+
+        <br>
+
+        <div class= "left-navigation-category-link">
+          <%= link_to "Simulateur", root_path, class: "yellow-link" %>
+        </div>
+        <p>Simulateur d'aide à la décision : définissez vos besoins et choisissez parmi les solutions les plus adéquates</p>
+        <div class= "left-navigation-button-call-to-action">
+          <%= link_to "Simulateur", root_path, class: "main-cta"%>
+        </div>
+
       </div>
     </div>
   </div>

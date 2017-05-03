@@ -1,0 +1,90 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-9">
+      <div class='article-page'>
+        <h4>Catégorie : La fosse septique</h4>
+        <h1>Quelles sont les principales contraintes de l’assainissement individuel ?</h1>
+        <span>19 mars 2017</span>
+
+        <p class="italic">La condition principale de réussite d’un assainissement individuel dépend de la surface du terrain et de sa perméabilité afin que l’infiltration des eaux via l’épandage souterrain soit efficace.</p>
+
+
+        <p><strong>Un terrain suffisamment grand…</strong></p>
+        <p>La surface minimale communément admise est de 500 mètres carrés dans les meilleurs conditions (terrain plat et perméable situé d’un seul tenant derrière ou devant la maison). La surface peut dépasser 1000 m2 lorsque les conditions sont peu favorables (terrain peu perméable en pente, ou divisé en plusieurs parties) Le choix est limité… Et ne dépend généralement pas du particulier !</p>
+
+        <%= image_tag "fosse_1.jpg", class: "img-responsive" %>
+        <p class="italic bold">Cf tableau de la composition des différents sols de France et leur propriétés d’absorption</p>
+
+        <p><strong>Et perméable !</strong></p>
+        <p>Si, dans les zones urbaines fortement peuplées l’assainissement collectif, composé de canalisations et d’une station d’épuration, s’impose financièrement et techniquement, ce n’est pas le cas pour certaines zones rurales ou péri-urbaines. Lorsque la densité d’habitants diminue, le coût augmente pour une solution collective et l’assainissement individuel devient plus pertinente, financièrement et techniquement.</p>
+
+        <div class="container-extract-article">
+          <p>En sdqsdqddddddddddddddd <strong>5 millions de foyers</strong> et <strong>12 millions de personnes</strong> en France. Bien réalisé, il ne coûte pas plus cher que l'assaisqdddddddddddddddddddddnissement collectif (tout à l'égoût).</p>
+        </div>
+
+        <p><strong>L’étude des sols et de l’environnement prépondérante <%= link_to "+ d’infos sur l'étude des sols", root_path, class: "yellow-link"%></strong></p>
+        <p>L’aptitude d’un terrain à infiltrer  l’eau dépend de plusieurs caractéristiques principales qui sont la nature du sol et sa composition :</p>
+        <ul>
+          <li>Un sol argileux infiltre mal les eaux</li>
+          <li>Un sol sableux peut absorber de grandes quantités d’eaux.</li>
+        </ul>
+        <p>En effet,  un sol sec pourra emmagasiner de fortes quantités d’eau tandis qu’un sol gorgé d’eau jusqu’à sa surface est dit hydromorphe et est inapte à l’épandage et ne peut convenir à l’assainissement individuel. La zone est-elle sensible à la pluie ou  aux inondations ?</p>
+        <p><strong>Que faire si mon terrain n’a pas les qualités idéales pour recevoir un assainissement individuel ?</strong></p>
+        <p>Pas de panique. Des solutions existent et celles-ci sont de plus en plus efficaces. Ces techniques sont en revanche plus chères car, au lieu d’utiliser le sol comme adjuvant dans la filtration et l’élimination des déchets, il nous faut récréer ces conditions de manière artificielle. Ces techniques qui peuvent passer par des lits filtrants ou des micro-stations d’épurations sont des procédés plus coûteux et d’entretien plus délicat qu’un système d’épandage classique et ne doivent donc être utilisées que lorsque la technique classique ne peut pas être mise en œuvre.</p>
+      </div>
+    </div>
+    <%= render 'shared/article_left_navigation' %>
+  </div>
+</div>
+
+<div class="container no-padding">
+  <div class="article_bottom_navigation">
+    <div class="row">
+      <h2 class="text-center">Articles de la même catégorie</h2>
+
+      <div class="col-md-4 col-sm-4">
+        <div class="article-card">
+          <%= link_to root_path do %>
+            <h6 class="text-center"> Quel choix entre assainissement individuel ou collectif ?</h6>
+            <div class="article-content">
+              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <p>Le choix du type d’assainissement, collectif ou individuel, dépend  de la collectivité locale...</p>
+              <%= link_to "Lire la suite", root_path, class: "yellow-link"%>
+            </div>
+            <% end %>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-4">
+        <div class="article-card">
+          <%= link_to root_path do %>
+            <h6 class="text-center"> De quoi se compose un assainissement individuel type ?</h6>
+            <div class="article-content">
+              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <p>L’assainissement individuel type se compose ordinairement d’une fosse septique et d’un épandage souterrain.</p>
+              <%= link_to "Lire la suite", root_path, class: "yellow-link"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-4">
+        <div class="article-card">
+          <%= link_to root_path do %>
+            <h6 class="text-center"> Quel est le coût global d’une fosse septique ?</h6>
+            <div class="article-content">
+              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <p>Le coût d’un assainissement individuel est généralement compris entre 5000 € et 15 000 € mais peut varier. </p>
+              <%= link_to "Lire la suite", root_path, class: "yellow-link"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+

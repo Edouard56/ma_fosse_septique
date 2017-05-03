@@ -1,0 +1,90 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-9">
+      <div class='article-page'>
+        <h4>Catégorie : La fosse septique</h4>
+        <h1>Comment fonctionne une fosse septique ?</h1>
+        <span>10 mars 2017</span>
+
+        <p class="italic">Une fosse septique est un ouvrage de traitement qui modifie les caractéristiques des eaux usées afin qu’une partie puisse être rejetée dans le sol.</p>
+
+        <p>Un double processus s’y produit de manière continue :</p>
+        <ul>
+          <li>Un phénomène physique</li>
+          <li>Un phénomène biologique</li>
+        </ul>
+
+        <%= image_tag "fosse_1.jpg", class: "img-responsive" %>
+        <p class="italic bold">Cf trouver un schéma de fonctionnement de la fosse septique</p>
+
+        <p>Le phénomène physique de décantation permet de séparer du liquide les matières qu’il transporte. Les matières les plus légères et moins denses que l’eau, telles que les graisses, flottent en surface et forment « un chapeau ». Les matières les plus lourdes sédimentent et forment un dépôt dans la partie inférieure de la fosse.</p>
+
+        <p>Le phénomène biologique va permettre de diminuer la quantité et la densité des boues. Ce sont des bactéries, qui sont présentes dans la fosse septique, qui vont dégrader les composés organiques par l’action de leur enzyme et les rendre solubles dans l’eau.</p>
+
+        <p>Deux raisons pour opter une fosse suffisamment grande:</p>
+        <ul>
+          <li>La décantation, c’est-à-dire le phénomène physique, est d’autant plus facilitée lorsque le débit des eaux usées est faible. La séparation des matières en suspension se déroule alors dans de bonnes conditions. En revanche, si le débit est fort, le dépôt de boues en suspension qui sort de la fosse peut être chargé. C’est pour cela qu’il peut être utile d’avoir deux bassins dans la fosse.</li>
+          <li>La dégradation biologique des boues est facilitée par une grande fosse car l’espace réservé aux boues est plus important et leur dégradation donc plus efficace.</li>
+        </ul>
+
+        <div class="container-extract-article">
+          <p>En sdqsdqddddddddddddddd <strong>5 millions de foyers</strong> et <strong>12 millions de personnes</strong> en France. Bien réalisé, il ne coûte pas plus cher que l'assaisqdddddddddddddddddddddnissement collectif (tout à l'égoût).</p>
+        </div>
+
+      </div>
+    </div>
+    <%= render 'shared/article_left_navigation' %>
+  </div>
+</div>
+
+<div class="container no-padding">
+  <div class="article_bottom_navigation">
+    <div class="row">
+      <h2 class="text-center">Articles de la même catégorie</h2>
+
+      <div class="col-md-4 col-sm-4">
+        <div class="article-card">
+          <%= link_to root_path do %>
+            <h6 class="text-center"> Quel choix entre assainissement individuel ou collectif ?</h6>
+            <div class="article-content">
+              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <p>Le choix du type d’assainissement, collectif ou individuel, dépend  de la collectivité locale...</p>
+              <%= link_to "Lire la suite", root_path, class: "yellow-link"%>
+            </div>
+            <% end %>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-4">
+        <div class="article-card">
+          <%= link_to root_path do %>
+            <h6 class="text-center"> De quoi se compose un assainissement individuel type ?</h6>
+            <div class="article-content">
+              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <p>L’assainissement individuel type se compose ordinairement d’une fosse septique et d’un épandage souterrain.</p>
+              <%= link_to "Lire la suite", root_path, class: "yellow-link"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-4">
+        <div class="article-card">
+          <%= link_to root_path do %>
+            <h6 class="text-center"> Quel est le coût global d’une fosse septique ? </h6>
+            <div class="article-content">
+              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <p>Le coût d’un assainissement individuel est généralement compris entre 5000 € et 15 000 € mais peut varier. </p>
+              <%= link_to "Lire la suite", root_path, class: "yellow-link"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+

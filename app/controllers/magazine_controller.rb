@@ -1,4 +1,4 @@
-class ArticlesController < ApplicationController
+class MagazineController < ApplicationController
   skip_before_action :authenticate_user!
   before_action :new_client
 
@@ -12,6 +12,4 @@ class ArticlesController < ApplicationController
   end
 
 
-
 end
-

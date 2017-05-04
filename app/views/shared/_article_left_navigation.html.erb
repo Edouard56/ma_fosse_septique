@@ -1,9 +1,8 @@
 <div class="col-md-3 hidden-xs nopadding ">
   <div class= "left-navigation-container">
     <div class="all-categories-articles">
-      <span class="left-navigation-title">
-        <h3>Dossiers</h3>
-      </span>
+
+      <%= link_to "Guides", guides_path, class: "left-navigation-title" %>
 
       <div class= "left-navigation-category-link">
         <%= link_to "La fosse septique", comprendre_l_assainissement_individuel_path, class: "yellow-link" %>
@@ -69,9 +68,7 @@
 
 
       <div class="left-navigation-call-to-action">
-        <span class="left-navigation-title">
-          <h3>Services</h3>
-        </span>
+        <%= link_to "Services", root_path, class: "left-navigation-title" %>
         <div class= "left-navigation-category-link">
           <%= link_to "Annuaire", root_path, class: "yellow-link" %>
         </div>
@@ -93,8 +90,20 @@
         <div class= "left-navigation-button-call-to-action">
           <%= link_to "Simulateur", root_path, class: "main-cta"%>
         </div>
-
       </div>
+
+      <div class="left-navigation-call-to-action">
+        <%= link_to "Magazine", magazine_index_path, class: "left-navigation-title" %>
+        <div class= "left-navigation-category-link">
+          <%= link_to "Magazine", magazine_index_path, class: "yellow-link" %>
+        </div>
+        <ul>
+          <li><%= link_to "Actualités juridiques", actualite_juridique_magazine_index_path, class: "small-link" %></li>
+          <li><%= link_to "Environnement", root_path, class: "small-link" %></li>
+          <li><%= link_to "Innovation", root_path, class: "small-link" %></li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </div>

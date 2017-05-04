@@ -1,9 +1,9 @@
-
+<%= render 'shared/guides_top_banner' %>
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-md-9">
       <div class='article-page'>
-        <h4>Catégorie : La fosse septique</h4>
+        <h4>Guide : La fosse septique</h4>
         <h1>Comprendre l'assainissement individuel</h1>
         <span>1 février 2017</span>
 
@@ -37,7 +37,7 @@
 <div class="container no-padding">
   <div class="article_bottom_navigation">
     <div class="row">
-      <h2 class="text-center">Tous les articles de la catégorie</h2>
+      <h2 class="text-center">Tous les articles du guide</h2>
 
       <!-- choix assainissment individuel -->
       <div class="col-md-4 col-sm-4">
@@ -59,7 +59,7 @@
           <%= link_to root_path do %>
             <h6 class="text-center"> De quoi se compose un assainissement individuel type ?</h6>
             <div class="article-content">
-              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <%= image_tag "fosses/composition_fosse.jpg", class: "img-card" %>
               <p>L’assainissement individuel type se compose ordinairement d’une fosse septique et d’un épandage souterrain.</p>
               <%= link_to "Lire la suite", de_quoi_se_compose_un_assainissement_individuel_type_path, class: "yellow-link"%>
             </div>
@@ -73,7 +73,7 @@
           <%= link_to root_path do %>
             <h6 class="text-center"> Quel est le coût global d’une fosse septique ? </h6>
             <div class="article-content">
-              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <%= image_tag "fosses/euro_cout.png", class: "img-card" %>
               <p>Le coût d’un assainissement individuel est généralement compris entre 5000 € et 15 000 € mais peut varier. </p>
               <%= link_to "Lire la suite", quel_est_le_cout_global_d_une_fosse_septique_path, class: "yellow-link"%>
             </div>
@@ -84,10 +84,10 @@
       <!-- contraintes -->
       <div class="col-md-4 col-sm-4">
         <div class="article-card">
-          <%= link_to root_path do %>
+          <%= link_to quelles_sont_les_principales_contraintes_de_l_assainissement_individuel_path do %>
             <h6 class="text-center"> Les principales contraintes de l’assainissement individuel</h6>
             <div class="article-content">
-              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <%= image_tag "fosses/vidange.jpg", class: "img-card" %>
               <p>Les principales contraintes d'efficacité sont la surface du terrain et la perméabilité des sols.</p>
               <%= link_to "Lire la suite", quelles_sont_les_principales_contraintes_de_l_assainissement_individuel_path, class: "yellow-link"%>
             </div>
@@ -98,10 +98,10 @@
     <!-- fonctionnement fosse septique -->
       <div class="col-md-4 col-sm-4">
         <div class="article-card">
-          <%= link_to root_path do %>
+          <%= link_to comment_fonctionne_une_fosse_septique_path do %>
             <h6 class="text-center">Comment fonctionne une fosse septique ?</h6>
             <div class="article-content">
-              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <%= image_tag "fosses/tank_schema.png", class: "img-card" %>
               <p>L'installation va traiter les eaux usées gràace à deux phénomènes : la décantation et la dégradation.</p>
               <%= link_to "Lire la suite", comment_fonctionne_une_fosse_septique_path, class: "yellow-link"%>
             </div>
@@ -112,10 +112,10 @@
        <!-- fonctionnement épandage -->
       <div class="col-md-4 col-sm-4">
         <div class="article-card">
-          <%= link_to root_path do %>
+          <%= link_to comment_fonctionne_l_epandage_souterrain_path do %>
             <h6 class="text-center">Comment fonctionne l’épandage souterrain ?</h6>
             <div class="article-content">
-              <%= image_tag "fosse_1.jpg", class: "img-card" %>
+              <%= image_tag "fosses/epandage_fosse_septique.jpg", class: "img-card" %>
               <p>Il finalise le processus en rejetant les effluents qui vont être dégradés par les bactéries du sol.</p>
               <%= link_to "Lire la suite", comment_fonctionne_l_epandage_souterrain_path, class: "yellow-link"%>
             </div>

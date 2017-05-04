@@ -7,10 +7,24 @@ Rails.application.routes.draw do
   mount Attachinary::Engine => "/attachinary"
 
   # routes magazines
-  get 'magazine', to: 'articles#index'
+  # resources :magazine, only: [ :index ] do
+  #   collection do
+  #     get 'actualite-juridique', to: 'magazine#home_actualite_juridique' do
+  #       collection do
+  #         get 'legislation_2017', to: 'magazine#legislation_2017'
+  #       end
+  #     end
+  #   end
+  # end
 
-    #routes actualite-juridique
-    get 'magazine/actualite-juridique/legislation-ce-qui-change-en-2017', to: 'articles#legislation_2017'
+  resources :magazine, only: [ :index ] do
+    get 'actualite-juridique', on: :collection, controller: "magazine", action: "home_actualite_juridique"
+    get 'actualite-juridique/legislation', on: :collection, controller: "magazine", action: "legislation"
+  end
+
+  #routes actualite-juridique
+  # get 'magazine', to: 'articles#index'
+  # get 'magazine/actualite-juridique/legislation-ce-qui-change-en-2017', to: 'articles#legislation_2017'
 
   # routes dossiers
   get 'quel-choix-pour-le-particulier-entre-assainissement-individuel-ou-collectif', to: 'articles#choix_assainissement_individuel_ou_collectif'

@@ -1,6 +1,10 @@
-class Magazine::ActualitesJuridiquesController < ApplicationController
+class ActualitesJuridiquesController < ApplicationController
+  skip_before_action :authenticate_user!
 
-def legislation_2017
-end
+  def home_actualite_juridique
+  end
+
+  def legislation
+  end
 
 end

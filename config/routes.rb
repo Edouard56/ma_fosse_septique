@@ -6,27 +6,16 @@ Rails.application.routes.draw do
   resources :clients, only: [ :new, :create, :show ]
   mount Attachinary::Engine => "/attachinary"
 
-  # routes magazines
-  # resources :magazine, only: [ :index ] do
-  #   collection do
-  #     get 'actualite-juridique', to: 'magazine#home_actualite_juridique' do
-  #       collection do
-  #         get 'legislation_2017', to: 'magazine#legislation_2017'
-  #       end
-  #     end
-  #   end
-  # end
-
   resources :magazine, only: [ :index ] do
-    get 'actualite-juridique', on: :collection, controller: "magazine", action: "home_actualite_juridique"
-    get 'actualite-juridique/legislation', on: :collection, controller: "magazine", action: "legislation"
+    get 'actualite-juridique', on: :collection, controller: "actualites_juridiques", action: "home_actualite_juridique"
+    get 'actualite-juridique/legislation', on: :collection, controller: "actualites_juridiques", action: "legislation"
   end
 
-  #routes actualite-juridique
-  # get 'magazine', to: 'articles#index'
-  # get 'magazine/actualite-juridique/legislation-ce-qui-change-en-2017', to: 'articles#legislation_2017'
 
-  # routes dossiers
+  # Partie guides
+  get 'guides', to: 'articles#index'
+
+  # La fosse septique
   get 'quel-choix-pour-le-particulier-entre-assainissement-individuel-ou-collectif', to: 'articles#choix_assainissement_individuel_ou_collectif'
   get 'de-quoi-se-compose-un-assainissement-individuel-type', to: 'articles#composition_assainissement_individuel'
   get 'quel-est-le-cout-global-d-une-fosse-septique', to: 'articles#cout_fosse_septique'
@@ -34,4 +23,6 @@ Rails.application.routes.draw do
   get 'comment-fonctionne-une-fosse-septique', to: 'articles#fonctionnement_fosse_septique'
   get 'comment-fonctionne-l-epandage-souterrain', to: 'articles#fonctionnement_epandage_souterrain'
   get 'comprendre-l-assainissement-individuel', to: 'articles#comprendre_assainissement_individuel'
+
+
 end

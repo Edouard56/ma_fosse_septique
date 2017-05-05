@@ -3,8 +3,9 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update]
 
   def index
-    @users = User.all
+    @client = Client.new
 
+    @users = User.all
     @users = User.where.not(latitude: nil, longitude: nil)
 
     @hash = Gmaps4rails.build_markers(@users) do |user, marker|
@@ -14,7 +15,8 @@ class UsersController < ApplicationController
   end
 
   def show
-
+    @client = Client.new
+    @user = User.find(params[:id])
   end
 
   # def new
@@ -29,16 +31,16 @@ class UsersController < ApplicationController
   # end
 
 
-  def edit
-     @user = User.find(params[:id])
-  end
+  # def edit
+  #    @user = User.find(params[:id])
+  # end
 
-  def update
-    @user = User.find(params[:id])
-    @user.update(user_params)
+  # def update
+  #   @user = User.find(params[:id])
+  #   @user.update(user_params)
 
-    redirect_to user_path(@user)
-  end
+  #   redirect_to user_path(@user)
+  # end
 
 
   private

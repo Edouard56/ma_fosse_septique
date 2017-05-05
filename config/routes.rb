@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   root to: 'pages#home'
-  resources :users
+  resources :users, only: [ :index, :show ]
   resources :clients, only: [ :new, :create, :show ]
   mount Attachinary::Engine => "/attachinary"
 

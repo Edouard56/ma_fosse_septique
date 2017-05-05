@@ -30,6 +30,9 @@ end
 #gem photo cloudinary
 gem 'cloudinary'
 
+#faker
+gem 'faker'
+
 #gem photo uploader attachinary
 gem 'attachinary', github: 'assembler/attachinary'
 gem 'jquery-fileupload-rails'
